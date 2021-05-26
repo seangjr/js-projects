@@ -1,0 +1,13 @@
+body {
+    background: navajowhite;
+}
+h1, p {
+    color: black;
+}
+.friend {
+    background: aquamarine;
+    align-items: center;
+}
+.friend h3 {
+    text-transform: uppercase;
+}
