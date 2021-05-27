@@ -18,5 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         h2.appendChild(h2Text);
         document.body.appendChild(h2);
+
     });
 });
