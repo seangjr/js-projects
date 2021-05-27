@@ -5,4 +5,3 @@ let resume = {
 }
 let allCaps = resume.Name.toUpperCase();
 let displayPosition = resume.Career;
-
