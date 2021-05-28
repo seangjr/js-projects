@@ -1,0 +1,21 @@
+body {
+    font-family: Arial;
+}
+. h1 {
+    color: black;
+}
+.h2 {
+    color: blueviolet;
+}
+.h3 {
+    color: crimson;
+}
+.h4 {
+    color: darkblue;
+}
+.h5 {
+    color: darkslategrey;
+}
+.h6 {
+    color: #2c3e3e;
+}
