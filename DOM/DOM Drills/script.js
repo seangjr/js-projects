@@ -46,12 +46,24 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("dblclick", setColor);
     setColor();
 
+
     document.getElementById("myBtn").addEventListener('click', function () {
-        let value = 1;
-        let x = document.createElement("li");
-        let t = document.createTextNode(`This is list item ${value}`);
-        x.appendChild(t);
-        ol.appendChild(x);
+        let li = document.createElement("li");
+        let liText = document.createTextNode(`This is list item`);
+        li.appendChild(liText);
+        ol.appendChild(li);
         document.body.appendChild(ol);
+
+        const setColorListItem = () => {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            li.style.color = '#'+randomColor;
+        }
+
+        document.addEventListener('click', setColorListItem);
+        setColorListItem();
+
     });
+
 });
+
+// nothing
