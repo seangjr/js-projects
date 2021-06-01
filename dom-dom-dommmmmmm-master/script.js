@@ -34,7 +34,47 @@ document.addEventListener("DOMContentLoaded", function () {
        //dom printing
        document.body.appendChild(div);
 
+        //random color function
+        const setRandomColor = () => {
+            const randomColor = Math.floor(Math.random()*1677215).toString(16);
+            div.style.backgroundColor = "#" + randomColor;
+        }
+        //updating the box itself
+        document.getElementById(div.id).addEventListener('click', setRandomColor);
+
+        //on double click, remove child node
+        document.getElementById(div.id).addEventListener('dblclick', function () {
+            if (div.id % 2 === 0) {
+                let elementID = parseInt(div.id) + 1;
+                let element = document.getElementById(elementID);
+                if (element == null) {
+                    alert(`Square with ID ${elementID} does not exist.`)
+                } else {
+                    element.parentNode.removeChild(element)
+                }
+            } else {
+                let elementID = parseInt(div.id) - 1;
+                let element = document.getElementById(elementID);
+                if (element == null) {
+                    alert(`Square with ID ${elementID} does not exist.`)
+                } else {
+                    element.parentNode.removeChild(element);
+                }
+            }
+        });
     });
+
+    //
+    // let divClicked = document.getElementsByTagName("div");
+    // let divCount = divClicked.length;
+    // let clickedDivId
+    //
+    // for (let i = 0; i < divCount; i+=1) {
+    //     divClicked[i].onclick = function (e) {
+    //         clickedDivId = this.id;
+    //     }
+    // }
+
 });
 
 
